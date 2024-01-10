@@ -7,8 +7,8 @@ h4,
 h5,
 h6 {
   color: inherit;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: var(--spectre-headings-font-weight);
+  line-height: var(--spectre-headings-line-height);
   margin-bottom: .5em;
   margin-top: 0;
 }
@@ -18,7 +18,7 @@ h6 {
 .h4,
 .h5,
 .h6 {
-  font-weight: 500;
+  font-weight: var(--spectre-headings-font-weight);
 }
 h1,
 .h1 {
@@ -26,7 +26,7 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 1.6rem;
+  font-size: var(--spectre-h2-font-size);
 }
 h3,
 .h3 {
