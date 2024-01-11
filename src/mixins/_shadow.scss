@@ -1,6 +1,6 @@
 // Component focus shadow
-@mixin control-shadow($color: $primary-color) {
-  box-shadow: 0 0 0 .1rem rgba($color, .2);
+@mixin control-shadow($color: $primary-shadow-color) {
+  box-shadow: 0 0 0 .1rem $color;
 }
 
 // Shadow mixin
