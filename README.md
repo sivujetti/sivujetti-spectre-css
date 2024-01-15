@@ -18,6 +18,24 @@ Spectre is a side project based on years of CSS development work on a large web 
 
 Spectre only includes modern base styles, responsive layout system, CSS components and utilities, and it can be modified for your project using standard build tools.
 
+### Usage (Sivujetti-Spectre CSS)
+
+Add these before or after `sivujetti-spectre.min.css`:
+
+```css
+:root {
+  --spectre-primary-color: #5755d9;
+  --spectre-primary-color-dark: #4b48d6; /* darken(--spectre-primary-color, 3%), you can use http://scg.ar-ch.org/ for this */
+  --spectre-primary-color-light: #6361dc; /* lighten(--spectre-primary-color, 3%) */
+  --spectre-secondary-color: #efeffb; /* lighten(--spectre-primary-color, 37.5%) */
+  --spectre-secondary-color-dark: #e3e3f8; /* darken(--spectre-secondary-color, 3%) */
+  --spectre-secondary-color-light: #fbfbfe; /* lighten(--spectre-primary-color, 3%) */
+  --spectre-link-color: #5755d9; /* --spectre-primary-color */
+  --spectre-link-color-dark: #302ecd; /* darken(--spectre-link-color, 10%) */
+  --spectre-link-color-light: #807fe2; /* lighten(--spectre-link-color, 10%) */
+}
+```
+
 ## Documentation
 
 New documentation is available at:
