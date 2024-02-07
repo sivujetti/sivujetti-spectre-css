@@ -25,6 +25,8 @@ Add these before or after `sivujetti-spectre.min.css`:
 ```css
 :root {
   --spectre-primary-color: #5755d9;
+  --spectre-dark-color: #303742;
+  --spectre-light-color: #fff;
   --spectre-primary-color-dark: #4b48d6; /* darken(--spectre-primary-color, 3%), you can use http://scg.ar-ch.org/ for this */
   --spectre-primary-color-light: #6361dc; /* lighten(--spectre-primary-color, 3%) */
   --spectre-secondary-color: #efeffb; /* lighten(--spectre-primary-color, 37.5%) */
@@ -33,6 +35,16 @@ Add these before or after `sivujetti-spectre.min.css`:
   --spectre-link-color: #5755d9; /* --spectre-primary-color */
   --spectre-link-color-dark: #302ecd; /* darken(--spectre-link-color, 10%) */
   --spectre-link-color-light: #807fe2; /* lighten(--spectre-link-color, 10%) */
+  --spectre-body-font-color: #3b4351; /* lighten(--spectre-dark-color, 5%) */
+  --spectre-primary-shadow-color: #5755d933; /* rgba(0.2) */
+  --spectre-gray-color: #bcc3ce; /* lighten(--spectre-dark-color, 55%) */
+  --spectre-gray-color-dark: #66748b; /* darken(--spectre-gray-color, 30%) */
+  --spectre-gray-color-light: #f7f8f9; /* lighten(--spectre-gray-color, 20%) */
+  --spectre-border-color: #dadee4; /* lighten($dark-color, 65%) */
+  --spectre-border-color-dark: #bdc4ce; /* darken(--spectre-border-color, 10%) */
+  --spectre-border-color-light: #f2f3f5; /* lighten(--spectre-border-color, 8%) */
+  --spectre-bg-color: #f7f8f9; /* lighten(--spectre-dark-color, 75%) */
+  --spectre-bg-color-dark: #eef0f2; /* darken(--spectre-bg-color, 3%) */
 }
 ```
 
