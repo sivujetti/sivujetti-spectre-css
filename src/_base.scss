@@ -38,7 +38,7 @@ a {
     text-decoration: underline;
   }
 
-  &:visited {
+  &:not(.btn):visited {
     color: $link-color-light;
   }
 }

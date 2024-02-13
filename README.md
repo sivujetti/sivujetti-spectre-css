@@ -35,6 +35,7 @@ Add these before or after `sivujetti-spectre.min.css`:
   --spectre-link-color: #5755d9; /* --spectre-primary-color */
   --spectre-link-color-dark: #302ecd; /* darken(--spectre-link-color, 10%) */
   --spectre-link-color-light: #807fe2; /* lighten(--spectre-link-color, 10%) */
+  --spectre-base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto;
   --spectre-body-font-color: #3b4351; /* lighten(--spectre-dark-color, 5%) */
   --spectre-primary-shadow-color: #5755d933; /* rgba(0.2) */
   --spectre-gray-color: #bcc3ce; /* lighten(--spectre-dark-color, 55%) */

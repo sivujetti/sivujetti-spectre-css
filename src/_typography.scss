@@ -7,8 +7,9 @@ h4,
 h5,
 h6 {
   color: inherit;
-  font-weight: var(--spectre-headings-font-weight);
-  line-height: var(--spectre-headings-line-height);
+  font-family: var(--jet-headings-font-family, var(--spectre-base-font-family));
+  font-weight: var(--jet-headings-font-weight, 500);
+  line-height: var(--jet-headings-line-height, 1.2);
   margin-bottom: .5em;
   margin-top: 0;
 }
@@ -18,31 +19,32 @@ h6 {
 .h4,
 .h5,
 .h6 {
-  font-weight: var(--spectre-headings-font-weight);
+  font-family: var(--jet-headings-font-family, var(--spectre-base-font-family));
+  font-weight: var(--jet-headings-font-weight, 500);
 }
 h1,
 .h1 {
-  font-size: 2rem;
+  font-size: var(--jet-h1-font-size, 2rem);
 }
 h2,
 .h2 {
-  font-size: var(--spectre-h2-font-size);
+  font-size: var(--jet-h2-font-size, 1.6rem);
 }
 h3,
 .h3 {
-  font-size: 1.4rem;
+  font-size: var(--jet-h3-font-size, 1.4rem);
 }
 h4,
 .h4 {
-  font-size: 1.2rem;
+  font-size: var(--jet-h4-font-size, 1.2rem);
 }
 h5,
 .h5 {
-  font-size: 1rem;
+  font-size: var(--jet-h5-font-size, 1rem);
 }
 h6,
 .h6 {
-  font-size: .8rem;
+  font-size: var(--jet-h6-font-size, .8rem);
 }
 
 // Paragraphs

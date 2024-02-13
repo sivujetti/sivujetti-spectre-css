@@ -1,13 +1,13 @@
 // Buttons
 .btn {
   appearance: none;
-  background: $bg-color-light;
-  border: $border-width solid $primary-color;
+  background: var(--jet-button-bg-color-normal, $bg-color-light);
+  border: var(--jet-button-border-normal, $border-width solid $primary-color);
   border-radius: $border-radius;
-  color: var(--spectre-primary-color);
+  color: var(--jet-button-color-normal, --spectre-primary-color);
   cursor: pointer;
   display: inline-flex; justify-content: center;
-  font-size: $font-size;
+  font-size: var(--jet-button-font-size, $font-size);
   // height: $control-size;
   line-height: $line-height;
   outline: none;
