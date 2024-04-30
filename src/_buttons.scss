@@ -2,7 +2,7 @@
 .btn {
   appearance: none;
   background: var(--jet-button-bg-color-normal, $bg-color-light);
-  border: var(--jet-button-border-normal, $border-width solid $primary-color);
+  border: var(--jet-button-border-width, $border-width) solid var(--jet-button-border-color-normal, --spectre-primary-color);
   border-radius: $border-radius;
   color: var(--jet-button-color-normal, --spectre-primary-color);
   cursor: pointer;

@@ -24,6 +24,7 @@ Add these before or after `sivujetti-spectre.min.css`:
 
 ```css
 :root {
+  --spectre-font-size: 0.8rem;
   --spectre-primary-color: #5755d9;
   --spectre-dark-color: #303742;
   --spectre-light-color: #fff;
