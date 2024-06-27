@@ -1,13 +1,13 @@
 // Buttons
 .btn {
   appearance: none;
-  background: var(--jet-button-bg-color-normal, $bg-color-light);
-  border: var(--jet-button-border-width, $border-width) solid var(--jet-button-border-color-normal, --spectre-primary-color);
-  border-radius: $border-radius;
-  color: var(--jet-button-color-normal, --spectre-primary-color);
+  background: var(--jet-buttons-bg-color-normal, $bg-color-light);
+  border: var(--jet-buttons-border-width, $border-width) solid var(--jet-buttons-border-color-normal, $primary-color);
+  border-radius: var(--jet-buttons-border-radius, $border-radius);
+  color: var(--jet-buttons-color-normal, $primary-color);
   cursor: pointer;
   display: inline-flex; justify-content: center;
-  font-size: var(--jet-button-font-size, $font-size);
+  font-size: var(--jet-buttons-font-size, $font-size);
   // height: $control-size;
   line-height: $line-height;
   outline: none;
@@ -23,8 +23,9 @@
   }
   &:focus,
   &:hover {
-    background: $secondary-color;
-    border-color: $primary-color-dark;
+    background: var(--jet-buttons-bg-color-hover, $secondary-color);
+    color: var(--jet-buttons-color-hover, inherit);
+    border-color: var(--jet-buttons-border-color-hover, $primary-color-dark);
     text-decoration: none;
   }
   &:active,
@@ -55,14 +56,14 @@
     color: $light-color;
     &:focus,
     &:hover {
-      background: transparent; // darken($primary-color-dark, 2%);
-      border-color: transparent; // darken($primary-color-dark, 5%);
+      background: transparent; // darken($primary-color-dark, 2%); ?
+      border-color: transparent; // darken($primary-color-dark, 5%); ?
       color: $light-color;
     }
     &:active,
     &.active {
-      background: transparent; // darken($primary-color-dark, 4%);
-      border-color: transparent; // darken($primary-color-dark, 7%);
+      background: transparent; // darken($primary-color-dark, 4%); ?
+      border-color: transparent; // darken($primary-color-dark, 7%); ?
       color: $light-color;
     }
     &.loading {
@@ -91,7 +92,7 @@
     &:hover,
     &:active,
     &.active {
-      color: $link-color-dark;
+      color: transparent; // $link-color-dark; ?
     }
   }
 
