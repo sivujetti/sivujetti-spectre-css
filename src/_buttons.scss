@@ -11,7 +11,7 @@
   // height: $control-size;
   line-height: $line-height;
   outline: none;
-  padding: $control-padding-y $control-padding-x;
+  padding: var(--jet-buttons-padding-y, $control-padding-y) var(--jet-buttons-padding-x, $control-padding-x);
   text-align: center;
   text-decoration: none;
   transition: background .2s, border .2s, box-shadow .2s, color .2s;
@@ -24,15 +24,15 @@
   &:focus,
   &:hover {
     background: var(--jet-buttons-bg-color-hover, $secondary-color);
-    color: var(--jet-buttons-color-hover, inherit);
     border-color: var(--jet-buttons-border-color-hover, $primary-color-dark);
+    color: var(--jet-buttons-color-hover, $primary-color-dark);
     text-decoration: none;
   }
   &:active,
   &.active {
-    background: $primary-color-dark;
-    border-color: transparent; // darken($primary-color-dark, 5%);
-    color: $light-color;
+    background: var(--jet-buttons-bg-color-hover, $secondary-color); // $primary-color-dark;
+    border-color: var(--jet-buttons-border-color-hover, $primary-color-dark); // darken($primary-color-dark, 5%);
+    color: var(--jet-buttons-color-hover, $primary-color-dark); // $light-color;
     text-decoration: none;
     &.loading {
       &::after {
@@ -51,25 +51,25 @@
 
   // Button Primary
   &.btn-primary {
-    background: $primary-color;
-    border-color: $primary-color-dark;
-    color: $light-color;
+    background: var(--jet-buttons-bg-color-primary-normal, $primary-color);
+    border-color: var(--jet-buttons-border-color-primary-normal, $primary-color-dark);
+    color: var(--jet-buttons-color-primary-normal, $light-color);
     &:focus,
     &:hover {
-      background: transparent; // darken($primary-color-dark, 2%); ?
-      border-color: transparent; // darken($primary-color-dark, 5%); ?
-      color: $light-color;
+      background: var(--jet-buttons-bg-color-primary-hover, $primary-color-dark); // darken($primary-color-dark, 2%);
+      border-color: var(--jet-buttons-border-color-primary-hover, $primary-color-dark); // darken($primary-color-dark, 5%);
+      color: var(--jet-buttons-color-primary-hover, $light-color);
     }
     &:active,
     &.active {
-      background: transparent; // darken($primary-color-dark, 4%); ?
-      border-color: transparent; // darken($primary-color-dark, 7%); ?
-      color: $light-color;
+      background: var(--jet-buttons-bg-color-primary-hover, $primary-color-dark); // darken($primary-color-dark, 4%);
+      border-color: var(--jet-buttons-border-color-primary-hover, $primary-color-dark); // darken($primary-color-dark, 7%);
+      color: var(--jet-buttons-color-primary-hover, $light-color);
     }
     &.loading {
       &::after {
-        border-bottom-color: $light-color;
-        border-left-color: $light-color;
+        border-bottom-color: var(--jet-buttons-color-primary-normal, $light-color);
+        border-left-color: var(--jet-buttons-color-primary-normal, $light-color);
       }
     }
   }
@@ -92,7 +92,7 @@
     &:hover,
     &:active,
     &.active {
-      color: transparent; // $link-color-dark; ?
+      color: $link-color-dark;
     }
   }
 

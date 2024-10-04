@@ -35,27 +35,27 @@ legend {
 // Form element: Input
 .form-input {
   appearance: none;
-  background: $bg-color-light;
+  background: var(--jet-inputs-bg-normal-color, $bg-color-light);
   background-image: none;
-  border: $border-width solid $border-color-dark;
-  border-radius: $border-radius;
-  color: $body-font-color;
+  border: var(--jet-inputs-border-width, $border-width) solid var(--jet-inputs-border-normal-color, $border-color-dark);
+  border-radius: var(--jet-inputs-border-radius, $border-radius);
+  color: var(--jet-inputs-text-color, $body-font-color);
   display: block;
-  font-size: $font-size;
-  height: $control-size;
+  font-size: var(--jet-inputs-font-size, $font-size);
+  // height: $control-size;
   line-height: $line-height;
   max-width: 100%;
   outline: none;
-  padding: $control-padding-y $control-padding-x;
+  padding: var(--jet-inputs-padding-y, $control-padding-y) var(--jet-inputs-padding-x, $control-padding-x);
   position: relative;
   transition: background .2s, border .2s, box-shadow .2s, color .2s;
   width: 100%;
   &:focus {
-    @include control-shadow();
-    border-color: $primary-color;
+    @include control-shadow(var(--jet-inputs-focus-shadow-color, $primary-shadow-color));
+    border-color: var(--jet-inputs-border-focus-color, $primary-color);
   }
   &::placeholder {
-    color: $gray-color;
+    color: var(--jet-inputs-placeholder-color, $gray-color);
   }
 
   // Input sizes
@@ -112,20 +112,20 @@ textarea.form-input {
 // Form element: Select
 .form-select {
   appearance: none;
-  border: $border-width solid $border-color-dark;
-  border-radius: $border-radius;
+  border: var(--jet-inputs-border-width, $border-width) solid var(--jet-inputs-border-normal-color, $border-color-dark);
+  border-radius: var(--jet-inputs-border-radius, $border-radius);
   color: inherit;
-  font-size: $font-size;
-  height: $control-size;
+  font-size: var(--jet-inputs-font-size, $font-size);
+  // height: $control-size;
   line-height: $line-height;
   outline: none;
-  padding: $control-padding-y $control-padding-x;
+  padding: var(--jet-inputs-padding-y, $control-padding-y) var(--jet-inputs-padding-x, $control-padding-x);
   vertical-align: middle;
   width: 100%;
-  background: $bg-color-light; 
+  background: var(--jet-inputs-bg-normal-color, $bg-color-light);
   &:focus {
-    @include control-shadow();
-    border-color: $primary-color;
+    @include control-shadow(var(--jet-inputs-focus-shadow-color, $primary-shadow-color));
+    border-color: var(--jet-inputs-border-focus-color, $primary-color);
   }
   &::-ms-expand {
     display: none;
@@ -148,15 +148,15 @@ textarea.form-input {
   &[size],
   &[multiple] {
     height: auto;
-    padding: $control-padding-y $control-padding-x;
+    padding: var(--jet-inputs-padding-y, $control-padding-y) var(--jet-inputs-padding-x, $control-padding-x);
 
     option {
       padding: $unit-h $unit-1;
     }
   }
   &:not([multiple]):not([size]) {
-    background: $bg-color-light url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center / .4rem .5rem;
-    padding-right: $control-icon-size + $control-padding-x;
+    background: var(--jet-inputs-bg-normal-color, $bg-color-light) url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center / .4rem .5rem;
+    padding-right: calc($control-icon-size + var(--jet-inputs-padding-x, $control-padding-x));
   }
 }
 
@@ -178,7 +178,7 @@ textarea.form-input {
 
 .has-icon-left {
   .form-icon {
-    left: $border-width;
+    left: var(--jet-inputs-border-width, $border-width);
   }
 
   .form-input {
@@ -188,7 +188,7 @@ textarea.form-input {
 
 .has-icon-right {
   .form-icon {
-    right: $border-width;
+    right: var(--jet-inputs-border-width, $border-width);
   }
 
   .form-input {
@@ -215,17 +215,17 @@ textarea.form-input {
     position: absolute;
     width: 1px;
     &:focus + .form-icon {
-      @include control-shadow();
-      border-color: $primary-color;
+      @include control-shadow(var(--jet-inputs-focus-shadow-color, $primary-shadow-color));
+      border-color: var(--jet-inputs-checkbox-selected-color, $primary-color);
     }
     &:checked + .form-icon {
-      background: $primary-color;
-      border-color: $primary-color;
+      background: var(--jet-inputs-checkbox-selected-color, $primary-color);
+      border-color: var(--jet-inputs-checkbox-selected-color, $primary-color);
     }
   }
 
   .form-icon {
-    border: $border-width solid $border-color-dark;
+    border: var(--jet-inputs-border-width, $border-width) solid var(--jet-inputs-border-normal-color, $border-color-dark);
     cursor: pointer;
     display: inline-block;
     position: absolute;
@@ -284,8 +284,8 @@ textarea.form-input {
       }
     }
     &:indeterminate + .form-icon {
-      background: $primary-color;
-      border-color: $primary-color;
+      background: var(--jet-inputs-checkbox-selected-color, $primary-color);
+      border-color: var(--jet-inputs-checkbox-selected-color, $primary-color);
       &::before {
         background: $bg-color-light;
         content: "";
@@ -329,10 +329,10 @@ textarea.form-input {
   .form-icon {
     background: $gray-color;
     background-clip: padding-box;
-    border-radius: $unit-2 + $border-width;
-    height: $unit-4 + $border-width * 2;
+    border-radius: calc($unit-2 + var(--jet-inputs-border-width, $border-width));
+    height: calc($unit-4 + var(--jet-inputs-border-width, $border-width) * 2);
     left: 0;
-    top: ($control-size-sm - $unit-4) * .5 - $border-width;
+    top: calc(($control-size-sm - $unit-4) * .5 - var(--jet-inputs-border-width, $border-width));
     width: $unit-8;
     &::before {
       background: $bg-color-light;

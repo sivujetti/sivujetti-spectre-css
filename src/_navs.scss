@@ -17,7 +17,7 @@
     }
     &.active {
       & > a {
-        color: darken($gray-color-dark, 10%);
+        color: $gray-color-dark; // darken($gray-color-dark, 10%);
         font-weight: bold;
         &:focus,
         &:hover {
